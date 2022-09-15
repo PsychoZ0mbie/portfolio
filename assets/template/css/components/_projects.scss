@@ -1,0 +1,116 @@
+@import "mixin";
+.content-projects{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: $blue2;
+    padding: 3rem;
+    overflow-y: scroll;
+    h2{
+        color:$white;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+.project{
+    background-color: $white;
+    max-height: 450px;
+    width: 100%;
+    left: -100vw;
+    position: relative;
+    overflow: hidden;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    //transition: 1s;
+    div{
+        padding: 0.3rem;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top:0;
+        text-align: center;
+        font-weight: bold;
+        color:$white;
+        opacity: 0;
+        transition: opacity 1s;
+        z-index: 2;
+        cursor: pointer;
+        h2{
+            width: 100%;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            position: absolute;
+            width: 100%;
+            left:50%;
+            bottom: 0.5rem;
+            transform: translateX(-50%);
+        }
+    }
+    span{
+        position: absolute;
+        left: 50%;
+        bottom: 1rem;
+        padding: 8px 16px ;
+        color:$white;
+        border-radius: 50%;
+        font-size: 20px;
+        background-color: $blue2;
+        transform: translateX(-50%);
+    }
+    &::after{
+        content:" ";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: -100%;
+        top:0;
+        background-color: $blue3;
+        transition: all 1s;
+    }
+    &:hover{
+        div{
+            opacity: 1;
+            transition: opacity 1s 0.35s;
+        }
+        &::after{
+            left:0;
+            transition: all 1s;
+        }
+    }
+}
+.project-modal-img{
+    max-height: 450px;
+    width: 100%;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+#data{
+    overflow-y: scroll;
+    max-height: 450px;
+}
+.carousel-inner{
+    height: 500px;
+}
+.carousel-item{
+    height: 100%;
+    width: 100%;
+    img{
+        min-height: 100%;
+        width: 100%;
+        
+    }
+}

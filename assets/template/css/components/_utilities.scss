@@ -1,0 +1,16 @@
+@import "mixin";
+.bg-ft{
+    @include bgColor($blue1,$white);
+}
+.bg-sd{
+    @include bgColor($blue2,$white);
+}
+.bg-th{
+    @include bgColor($blue3,$white);
+}
+.bg-fv{
+    @include bgColor($blue4,$white);
+}
+.bg-w{
+    @include bgColor($white,$blue1);
+}

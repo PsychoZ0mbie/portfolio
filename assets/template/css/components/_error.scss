@@ -1,0 +1,13 @@
+@import "mixin";
+.error{
+    width: 100vw;
+    height: 100vh;
+    background-color: $blue1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:$white;
+    h1{
+        color:$blue4
+    }
+}

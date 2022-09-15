@@ -1,0 +1,165 @@
+@import "mixin";
+@import "content";
+@import "buttons";
+.content-home{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+    .img-content{
+        height: 100%;
+        width: 100%;
+        transform: scale(1,2);
+        object-position: 0 -3rem;
+    }
+    &::after{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        content:" ";
+        background-color: rgba($blue2, 0.581);
+        z-index: 1;
+    }
+    
+}
+.presentation{
+    text-align: center;
+    position: absolute;
+    color:$white;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    width: 40rem;
+    height: 10rem;
+    
+}
+.presentation-title-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .presentation-title{
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        margin-bottom: 1rem;
+        height: 4rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            margin: 0;
+            font-size: 3rem;
+        }
+        span{
+            position: absolute;
+            &:nth-of-type(1){
+                height: 0.2rem;
+                width: 0;
+                top: 0;
+                left: 0;
+                background-color: $white;
+            }
+            &:nth-of-type(2){
+                height: 0;
+                width: 0.2rem;
+                top: 0;
+                right: 0;
+                background-color: $white;
+            }
+            &:nth-of-type(3){
+                height: 0.2rem;
+                width: 0;
+                bottom: 0;
+                right: 0;
+                background-color: $white;
+            }
+            &:nth-of-type(4){
+                height: 0;
+                width: 0.2rem;
+                bottom: 0;
+                left: 0;
+                background-color: $white;
+            }
+        }
+    }
+}
+div{
+    position: relative;
+    .presentation-subtitle{
+        overflow: hidden;
+        h2{
+            margin: 0;
+            font-size: 1.5rem;
+            position: relative;
+            bottom:-2rem;
+        }
+    }
+    #btnAbout{
+        opacity: 0;
+        //transition: opacity 1s 2s;
+        position: absolute;
+        top:-100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@keyframes spanTop{
+    0%{
+        width: 0;
+    }50%{
+        width: 100%;
+    }100%{
+        left:50rem;
+    }
+}
+@keyframes spanRight{
+    0%{
+        height: 0;
+    }30%{
+        height: 100%;
+    }100%{
+        top:5rem;
+    }
+}
+@keyframes spanBottom{
+    0%{
+        width: 0;
+    }50%{
+        width: 100%;
+    }100%{
+        right:50rem;
+    }
+}
+@keyframes spanLeft{
+    0%{
+        height: 0;
+    }30%{
+        height: 100%;
+    }100%{
+        bottom:5rem;
+    }
+}
+@keyframes psShow {
+    100%{
+       bottom: 0;
+    }
+}
+@keyframes btnMoveP {
+    0%{
+        opacity: 0;
+        //top:5rem;
+    }
+    50%{
+        
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}

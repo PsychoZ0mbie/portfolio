@@ -1,0 +1,92 @@
+@import "mixin";
+.content-services{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: $blue2;
+    padding: 3rem;
+    h2{
+        color:$white;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+.service{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.services{
+    display: flex;
+    flex-direction: column;
+    gap:1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.service-item{
+    background-color: $blue1;
+    height: 12rem;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    i{
+        color:$white;
+        font-size: 2rem;
+    }
+    h3{
+        color:$blue4;
+        font-size: 1.5rem;
+    }
+    p{
+        color:$white;
+    }
+}
+.form-field{
+    position: relative;
+    label{
+        font-size: 1.5rem;
+        color: $white;
+    }
+    input,textarea{
+        background-color:$blue1;
+        width: 100%;
+        border: none;
+        resize: none;
+        color:$white;
+        &::placeholder{
+            color:$blue3;
+        }
+        &:focus{
+            background-color: $blue1;
+            color:$white;
+            border: none;
+            outline: none;
+            box-shadow:none
+        }
+        &:focus + .form-focus-effect{
+            width: 100%;
+            transition: width 0.5s;
+        }
+    }
+    
+}
+.form-focus-effect{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 0;
+    height: 0.2rem;
+    background-color: $blue4;
+    transition: width 0.5s;
+}
+.valid-input{
+    background-color: #ff0000; 
+    width: 100%;
+}

@@ -1,0 +1,48 @@
+@import "mixin";
+
+
+
+.button{
+    //border-radius: 5px;
+    padding: 0.5rem 2rem;
+    border: none;
+    overflow: hidden;
+    text-decoration: none;
+    height: 2.5rem
+}
+.button-bg-ft{
+    @include bgColor($blue1,$white);
+}
+.button-bg-sd{
+    @include bgColor($blue2,$white);
+}
+.button-bg-th{
+    @include bgColor($blue3,$white);
+}
+.button-bg-fv{
+    @include bgColor($blue4,$white);
+}
+.button-bg-w{
+    @include bgColor($white,$blue1);
+}
+
+.button-hover-h1{
+    position: relative;
+    &::before{
+        content: " ";
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 0%;
+        transition: all 1s ease;
+    }
+    &:hover{
+        color:$white;
+        &::before{
+            width: 100%;
+            background-color: rgba($white, 0.1);
+            transition: width 1s ease;
+        }
+    }
+}
