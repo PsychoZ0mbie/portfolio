@@ -14,3 +14,6 @@
 .bg-w{
     @include bgColor($white,$blue1);
 }
+.scroll-y{
+    overflow-y: scroll;
+}

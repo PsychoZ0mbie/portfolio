@@ -44,8 +44,8 @@
         return $format;
     }
     function emailNotification(){
-        require_once("Models/StoreModel.php");
-        $obj = new StoreModel();
+        require_once("Models/MailModel.php");
+        $obj = new MailModel();
         $request = $obj->selectMails();
         $total = 0;
         if(!empty($request)){
@@ -70,8 +70,8 @@
             $emailDestino = $data['to'];
             $nombre=$data['name'];
 
-            $empresa = "David Parrado";
-            $remitente = "pruebascodigoenergizado@hotmail.com";
+            $empresa = EMPRESA;
+            $remitente = REMITENTE;
 
             ob_start();
             require_once("Views/Template/Email/".$template.".php");
@@ -83,7 +83,7 @@
             $mail->Host       = 'smtp.office365.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true; 
             $mail->Username   = $remitente;
-            $mail->Password   = "Da.197023";
+            $mail->Password   = "Maricondemierda.2";
                                     //Enable SMTP authentication
                                 //SMTP username
                                         //SMTP password

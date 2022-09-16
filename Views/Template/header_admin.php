@@ -1,6 +1,5 @@
 <?php 
-    /*$notification = emailNotification();
-    $companyData = getCompanyInfo();*/
+    $notification = emailNotification();
 ?>
 
 <!DOCTYPE html>
@@ -45,17 +44,17 @@
                     </a>
                     <ul class="header-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link position-relative" href="<?=base_url()?>/store/mailbox">
+                            <a class="nav-link position-relative" href="<?=base_url()?>/mail">
                                 <?php
-                                    /*$notify ="";
+                                    $notify ="";
                                     if($notification>0){
                                         $notify='<span class="position-absolute top-0 end-0 translate-middle p-1 ms-2 mt-1 bg-danger border border-light rounded-circle"><span class="visually-hidden">New alerts</span></span>';
-                                    }*/
+                                    }
                                 ?>
                                 <svg class="icon icon-lg">
                                 <use xlink:href="<?=media()?>/coreui/coreui-free-bootstrap-admin-template/dist/vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
                                 </svg>
-                                
+                                <?=$notify?>
                             </a>
                         </li>
                     </ul>

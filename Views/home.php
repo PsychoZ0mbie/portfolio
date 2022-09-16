@@ -103,13 +103,13 @@
                     </div>
                     <div class="position-relative">
                         <div class="presentation-subtitle"><h2>Desarrollador web</h2></div>
-                        <a href="#" onclick="showLoading(4)" class="button button-bg-th button-hover-h1" id="btnAbout">Contáctame</a>
+                        <button type="button" onclick="showLoading(4)" class="button button-bg-th button-hover-h1" id="btnAbout">Contáctame</button>
                     </div>
                 </div>
             </section>
             <section class="content-about d-none">
                 <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-                    <div class="row align-items-center">
+                    <div class="row h-100 align-items-center">
                         <div class="col-lg-6 mb-3">
                             <div class="about-image">
                                 <img src="<?=media()?>/template/images/david.png" alt="David Parrado">
@@ -119,94 +119,71 @@
                         <div class="col-lg-6">
                             <div class="about-description">
                                 <h2 class="m-0 mb-3">Sobre mi</h2>
-                                <p>Soy un joven autodidacta apasionado por el desarrollo web, creando sitios creativos, dinámicos e intuitivos para el usuario.<br><br>
-                                Soy una persona bien organizada, solucionadora de problemas y trabajador independiente con gran atención al detalle.
+                                <p>
+                                    Soy un desarrollador web fullstack autodidacta que me encanta poner a prueba mis conocimientos y habilidades para crear
+                                    sitios creativos, dinámicos e intuitivos para el usuario. Además, cuento con experiencia de 3 años trabajando en equipo.
+                                    <br><br>Siempre busco la mejor solución para brindarle a las personas una imágen profesional con un trabajo de calidad, superando
+                                    sus expectativas.
                                 </p>
                             </div>
+                            <button type="button" onclick="showLoading(4)" class="mt-3 mb-3 button button-bg-th button-hover-h1">Contáctame</button>
                         </div>
                         
                     </div>
                 </div>
             </section>
             <section class="content-skill d-none">
-                <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-                    <div class="row w-100">
-                        <h2>Habilidades</h2>
-                        <div class="skill-item">
-                            <i class="fa fa-html5"></i>
-                            <div>
-                                <p class="m-0 text-center">HTML</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <div>
-                                <p class="m-0 text-center">CSS3</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-brands fa-js"></i>
-                            <div>
-                                <p class="m-0 text-center">Javascript</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-brands fa-sass"></i>
-                            <div>
-                                <p class="m-0 text-center">Sass</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-brands fa-bootstrap"></i>
-                            <div>
-                                <p class="m-0 text-center">Bootstrap</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-brands fa-php"></i>
-                            <div>
-                                <p class="m-0 text-center">php</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-database"></i>
-                            <div>
-                                <p class="m-0 text-center">MySQL</p>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
+                <h2>Habilidades</h2>
+                <div class="row p-2">
+                    <div class="h-100 col-lg-4 skill-item">
+                        <div>
+                            <i class="fa fa-html5" style="color:#f06529;"></i>
+                            <p>HTML</p>
+                            <p>Lenguaje de marcado de hipertexto para la maquetación de sitios web</p>
                         </div>
                     </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-content">
-                        
+                    <div class="h-100 col-lg-4 skill-item">
+                        <div>
+                            <i class="fa-brands fa-css3-alt" style="color:#2965f1"></i>
+                            <p>CSS3</p>
+                            <p>Hoja de estilos en cascada para el diseño web</p>
+                        </div>
                     </div>
-                    <!--
-                    <ul class="skill-current">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>-->
+                    <div class="h-100 col-lg-4 skill-item">
+                        <div>
+                            <i class="fa-brands fa-js" style="color:#F0DB4F"></i>
+                            <p>Javascript</p>
+                            <p>Lenguaje de programación del lado del cliente para la funcionalidad del sitio web</p>
+                        </div>
+                    </div>
+                    <div class="h-100 col-lg-4 skill-item">
+                        <div>
+                            <i class="fa-brands fa-sass" style="color:#CD6799"></i>
+                            <p>Sass</p>
+                            <p>Preprocesador de css para generar hojas de estilo en cascada de forma automática</p>
+                        </div>
+                    </div>
+                    <div class="h-100 col-lg-4 skill-item">
+                        <div>
+                            <i class="fa-brands fa-bootstrap" style="color:#602C50"></i>
+                            <p>Bootstrap</p>
+                            <p>Biblioteca o framework para el diseño de sitios y aplicaciones web</p>
+                        </div>
+                    </div>
+                    <div class="h-100 col-lg-4 skill-item">
+                        <div>
+                            <i class="fa-brands fa-php" style="color:#8993be"></i>
+                            <p>PHP</p>
+                            <p>Lenguaje de programación del lado del servidor para el procesamiento de datos</p>
+                        </div>
+                    </div>
+                    <div class="h-100 col-lg-4 skill-item">
+                        <div>
+                            <i class="fa-solid fa-database" style="color:#F29111"></i>
+                            <p>MySQL</p>
+                            <p>Sistema de gestión de base de datos</p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="content-projects d-none">

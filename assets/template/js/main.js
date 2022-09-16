@@ -94,6 +94,7 @@ window.addEventListener("load",function(){
                 document.querySelector(".toast-body").classList.remove("bg-danger");
                 document.querySelector(".toast-body").classList.add("bg-success");
                 document.querySelector(".toast-body").innerHTML=objData.msg;
+                form.reset();
                 toast.show();
             }else{
                 document.querySelector(".toast-body").classList.add("bg-danger");

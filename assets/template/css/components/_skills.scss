@@ -8,6 +8,7 @@
     left:0;
     background-color: $blue2;
     padding: 3rem;
+    overflow-y: scroll;
     h2{
         color:$white;
         font-size: 3rem;
@@ -15,10 +16,25 @@
     }
 }
 .skill-item{
-    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    div{
+      width: 100%;
+    }
+    p{
+        color:$white;
+        &:nth-of-type(1){
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+    i{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    /*padding: 0.5rem;
     height: 5rem;
     width: 100%;
-    //background-color: blue;
     position: relative;
     margin-bottom: 1.5rem;
     i{
@@ -42,5 +58,5 @@
                 background-color: $blue3;
             }
         }
-    }
+    }*/
 }

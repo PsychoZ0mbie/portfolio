@@ -7,7 +7,7 @@
     top:0;
     left:0;
     background-color: $blue2;
-    //overflow-y: scroll;
+    overflow-y: scroll;
     padding: 3rem;
     h2{
         color:$white;
@@ -19,9 +19,6 @@
 .about-description{
     font-size: 1.5rem;
     color:$white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .about-image{
     position: relative;

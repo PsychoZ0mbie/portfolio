@@ -24,14 +24,6 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?=base_url()?>/customer">
-                                    <svg class="nav-icon">
-                                        <use xlink:href="<?=media()?>/coreui/coreui-free-bootstrap-admin-template/dist/vendors/@coreui/icons/svg/free.svg#cil-sign-language"></use>
-                                    </svg> 
-                                    Habilidades<span class="badge badge-sm bg-info ms-auto"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="<?=base_url()?>/projects">
                                     <svg class="nav-icon">
                                         <use xlink:href="<?=media()?>/coreui/coreui-free-bootstrap-admin-template/dist/vendors/@coreui/icons/svg/free.svg#cil-folder"></use>
@@ -40,7 +32,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?=base_url()?>/orders">
+                                <a class="nav-link" href="<?=base_url()?>/mail">
                                     <svg class="nav-icon">
                                         <use xlink:href="<?=media()?>/coreui/coreui-free-bootstrap-admin-template/dist/vendors/@coreui/icons/svg/free.svg#cil-send"></use>
                                     </svg> 

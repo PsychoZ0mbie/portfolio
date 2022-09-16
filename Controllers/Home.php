@@ -14,6 +14,7 @@
             $this->views->getView($this,"home",$data);
         }
         public function sendMessage(){
+            //dep($_POST);exit;
             if($_POST){
                 if(empty($_POST['txtName']) || empty($_POST['txtEmail']) || empty($_POST['txtBusiness']) || empty($_POST['txtServices']) || empty($_POST['txtMessage'])){
                     $arrResponse = array("status"=>false,"msg"=>"Error de datos");
@@ -24,9 +25,10 @@
                     $strServices = strClean($_POST['txtServices']);
                     $strMessage = strClean($_POST['txtMessage']);
                     $arrMessage = array("business"=>$strBusiness,"services"=>$strServices,"message"=>$strMessage); 
-                    $data = array("name"=>$strName,"to"=>$strEmail,"message"=>$arrMessage,"cc"=>"davidstiven1999@hotmail.com","subject"=>"Servicios de Diseño & Desarrollo web - David Parrado");
-                    
+                    $data = array("name"=>$strName,"to"=>$strEmail,"message"=>$arrMessage,"cc"=>COPIA,"subject"=>"Servicios de Diseño & Desarrollo web - David Parrado");
+
                     if(sendEmail($data,"email_contact")){
+                        $request = $this->insertMessage($strName,$strEmail,$strBusiness,$strServices,$strMessage);
                         $arrResponse = array("status"=>true,"msg"=>"Mensaje enviado");  
                     }else{
                         $arrResponse = array("status"=>false,"msg"=>"No se ha podido enviar el mensaje");
